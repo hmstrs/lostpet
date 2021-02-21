@@ -1,19 +1,11 @@
 const connectIfNot = require('../mongo');
 
 /**
- * POST /api/post - create order about lost pet
+ * POST /api/bot - get posts about lost pets with filters
  * body {
- *  "animal": enum(),
- *  "name": "vaska",
- *  "breed": "pit-bul",
- *  "color": "yellow",
- *  "size": enum("smal", "medium", "big"),
- *  "features": "long scar on left leg",
- *  "additional": "it had blue collar",
- *  "reward": "100$",
- *  "owner_name": "Illya Fedorovich",
- *  "phone": "+380981255777",
- *  "status": enum("pending", "resolved", "cancelled")
+ *   "lat": "45.345",
+ *   "alt" "32.12",
+ *   "url": "http://....com"
  * }
  * @param req
  * @param res
@@ -22,7 +14,7 @@ export default async (req, res) => {
   if (req.method === 'POST') {
     // pre setup of DB
     await connectIfNot();
-    const collection = global.DB.collection('Posts');
+    const collection = global.DB.collection('Locations');
     // pre setup of DB
     const result = await collection.insertOne(req.body);
     console.debug(result.ops);
