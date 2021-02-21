@@ -28,9 +28,9 @@ export default async (req, res) => {
     const result = await collection.find(req.query).toArray();
     console.debug(result);
     res.statusCode = 200;
-    res.send(result);
+    res.json(result);
   } else {
     res.statusCode = 404;
-    return res.end('Try another HTTP Method');
+    return res.write('Try another HTTP Method');
   }
 }

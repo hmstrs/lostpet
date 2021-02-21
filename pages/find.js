@@ -3,7 +3,7 @@ import Footer from '../components/footer'
 import styles from '../styles/Find.module.css'
 
 export default function Find() {
-  const redirectToList = () => location.href = 'list';
+  const redirectToList = () => location.href = '/';
 
   return (
     <div>
@@ -115,7 +115,6 @@ export default function Find() {
           </div>
         </div>
       </main>
-      <Footer/>
     </div>
   )
 }
