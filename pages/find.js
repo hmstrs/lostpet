@@ -3,6 +3,8 @@ import Footer from '../components/footer'
 import styles from '../styles/Find.module.css'
 
 export default function Find() {
+  const redirectToList = () => location.href = 'list';
+
   return (
     <div>
       <Head>
@@ -91,7 +93,7 @@ export default function Find() {
             </div>
             
             <div>
-              <button className={styles.button} onClick={null}>
+              <button className={styles.button} onClick={redirectToList}>
                 Опублікувати
               </button>
             </div>
@@ -99,7 +101,7 @@ export default function Find() {
 
           <div className={styles.col}>
             <div className={`${styles.rounded} ${styles.imagecard}`}>
-              <img src="/tvari.jpg" alt=""/>
+              <img src="/dog.jpg" alt=""/>
               <div className={`${styles.cardlabel} ${styles.col} ${styles.flexcenter}`}>
                 <p className={styles.p}>Як він виглядає? Додайте фото</p>
               </div>

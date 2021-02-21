@@ -30,23 +30,23 @@ export default function Search() {
           <div className={styles.col}>
             <div className={styles.row}>
               <div className={`${styles.rounded} ${styles.imagecard}`}>
-                <img src="/tvari.jpg" alt=""/>
+                <img src="/humster.jpg" alt=""/>
                 <div className={`${styles.cardlabel} ${styles.row} ${styles.flexcenter}`}>
-                  <p className={styles.p}>Рекс</p>
+                  <p className={styles.p}>Пухляш</p>
                   <span className={styles.span}>1 км</span>
                 </div>
               </div>
 
               <div className={`${styles.rounded} ${styles.imagecard}`}>
-                <img src="/tvari.jpg" alt=""/>
+                <img src="/cat.jpeg" alt=""/>
                 <div className={`${styles.cardlabel} ${styles.row} ${styles.flexcenter}`}>
-                  <p className={styles.p}>Рекс</p>
+                  <p className={styles.p}>Барсік</p>
                   <span className={styles.span}>800 м</span>
                 </div>
               </div>
 
               <div className={`${styles.rounded} ${styles.imagecard}`}>
-                <img src="/tvari.jpg" alt=""/>
+                <img src="/sobaka.jpg" alt=""/>
                 <div className={`${styles.cardlabel} ${styles.row} ${styles.flexcenter}`}>
                   <p className={styles.p}>Рекс</p>
                   <span className={styles.span}>1.6 км</span>
@@ -54,9 +54,9 @@ export default function Search() {
               </div>
 
               <div className={`${styles.rounded} ${styles.imagecard}`}>
-                <img src="/tvari.jpg" alt=""/>
+                <img src="/spider.jpeg" alt=""/>
                 <div className={`${styles.cardlabel} ${styles.row} ${styles.flexcenter}`}>
-                  <p className={styles.p}>Рекс</p>
+                  <p className={styles.p}>Ларрі</p>
                   <span className={styles.span}>2 км</span>
                 </div>
               </div>
