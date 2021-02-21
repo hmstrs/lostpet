@@ -9,8 +9,12 @@
   font-weight: bold;
   font-size: 16px;
   color: white;
-  background: #0E83EF;
+  background: #0e83ef;
   border-radius: 20px;
+}
+
+.FindMy:hover {
+  opacity: 0.8;
 }
 
 .container {
@@ -43,7 +47,7 @@
   height: 100%;
 }
 
-.p  {
+.p {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0.5rem 0;
@@ -56,20 +60,20 @@
 }
 
 .button {
-  border: 3px solid #0E83EF;
+  border: 3px solid #0e83ef;
   border-radius: 500px;
-  background-color: #0E83EF;
+  background-color: #0e83ef;
   height: 3rem;
   width: 280px;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .button:hover {
   background-color: transparent;
-  color: #0E83EF;
+  color: #0e83ef;
 }
 
 .mt {
@@ -90,7 +94,8 @@
   gap: 2rem;
 }
 
-.row > *, .col > * {
+.row > *,
+.col > * {
   flex: 1 1 21%;
 }
 
@@ -122,7 +127,8 @@
 
 .cardlabel {
   border-top: 1px solid black;
-  background-color: #ffffffcd;
+  background-color: #ffffffad;
+  backdrop-filter: saturate(180%) blur(20px);
   padding: 0 1rem;
   position: absolute;
   bottom: 0;
