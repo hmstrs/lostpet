@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Footer from '../components/footer'
-import styles from '../styles/Find.module.css'
+import Head from "next/head";
+import Footer from "../components/footer";
+import styles from "../styles/Find.module.css";
 
 export default function Find() {
-  const redirectToList = () => location.href = '/';
+  const redirectToList = () => (location.href = "/");
 
   return (
     <div>
@@ -13,20 +13,26 @@ export default function Find() {
       </Head>
 
       <main className={`${styles.main} ${styles.container}`}>
-        <h1 className={styles.title}>
-          Не хвилюйтесь, знайдемо
-        </h1>
+        <h1 className={styles.title}>Не хвилюйтесь, знайдемо</h1>
 
         <div className={`${styles.row} ${styles.mt}`}>
           <div className={styles.col}>
             <div>
               <div className={`${styles.minirow} ${styles.row}`}>
-                <input
-                  className={`${styles.col} ${styles.input} ${styles.rounded}`}
-                  type="text"
+                <select
                   name="pet_type"
-                  placeholder="Кіт, пес чи може папуга?"
-                />
+                  className={`${styles.col} ${styles.input} ${styles.rounded}`}
+                >
+                  <option value="" disabled selected>
+                    Кіт, пес чи може пташка?
+                  </option>
+                  <option value="Собачка">Пес</option>
+                  <option value="Котик">Кіт</option>
+                  <option value="Пташка">Пташка</option>
+                  <option value="Гризун">Гризун</option>
+                  <option value="Земноводне">Земноводне</option>
+                  <option value="Інше">Інше</option>
+                </select>
                 <input
                   className={`${styles.col} ${styles.input} ${styles.rounded}`}
                   type="text"
@@ -37,9 +43,7 @@ export default function Find() {
             </div>
 
             <div>
-              <p className={styles.p}>
-                Як ви кличете свого улюбленця?
-              </p>
+              <p className={styles.p}>Як ви кличете свого улюбленця?</p>
               <input
                 className={`${styles.input} ${styles.rounded} ${styles.w100}`}
                 type="text"
@@ -47,11 +51,9 @@ export default function Find() {
                 placeholder="Оклик, наприклад “Барсик”"
               />
             </div>
-            
+
             <div>
-              <p className={styles.p}>
-                Якого він кольору?
-              </p>
+              <p className={styles.p}>Якого він кольору?</p>
               <input
                 className={`${styles.input} ${styles.rounded} ${styles.w100}`}
                 type="text"
@@ -59,7 +61,7 @@ export default function Find() {
                 placeholder="Окрас, наприклад “Рудий, з білими цятками на вухах“"
               />
             </div>
-            
+
             <div>
               <p className={styles.p}>
                 Всі тваринки особливі, чим особлива ваша?
@@ -71,27 +73,29 @@ export default function Find() {
                 placeholder="Додаткові відомості, наприклад “Зелений нашийник”"
               />
             </div>
-            
+
             <div>
-              <p className={styles.p}>
-                Як вас звати і як зв’язатись?
-              </p>
+              <p className={styles.p}>Як вас звати і як зв’язатись?</p>
               <div className={`${styles.minirow} ${styles.row}`}>
                 <input
                   className={`${styles.col} ${styles.input} ${styles.rounded}`}
                   type="text"
+                  inputmode="text"
+                  autocomplete="given_name"
                   name="owner_name"
                   placeholder="Ваше ім’я"
                 />
                 <input
                   className={`${styles.col} ${styles.input} ${styles.rounded}`}
-                  type="text"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
                   name="owner_contacts"
-                  placeholder="Телефон або Ел. пошта"
+                  placeholder="Телефон"
                 />
               </div>
             </div>
-            
+
             <div>
               <button className={styles.button} onClick={redirectToList}>
                 Опублікувати
@@ -101,20 +105,26 @@ export default function Find() {
 
           <div className={styles.col}>
             <div className={`${styles.rounded} ${styles.imagecard}`}>
-              <img src="/dog.jpg" alt=""/>
-              <div className={`${styles.cardlabel} ${styles.col} ${styles.flexcenter}`}>
+              <img src="/dog.jpg" alt="" />
+              <div
+                className={`${styles.cardlabel} ${styles.col} ${styles.flexcenter}`}
+              >
                 <p className={styles.p}>Як він виглядає? Додайте фото</p>
               </div>
             </div>
             <div className={`${styles.rounded} ${styles.imagecard}`}>
-              <img src="/map.jpg" alt=""/>
-              <div className={`${styles.cardlabel} ${styles.col} ${styles.flexcenter}`}>
-                <p className={styles.p}>Вкажіть місце, де ви бачились востаннє</p>
+              <img src="/map.jpg" alt="" />
+              <div
+                className={`${styles.cardlabel} ${styles.col} ${styles.flexcenter}`}
+              >
+                <p className={styles.p}>
+                  Вкажіть місце, де ви бачились востаннє
+                </p>
               </div>
             </div>
           </div>
         </div>
       </main>
     </div>
-  )
+  );
 }
