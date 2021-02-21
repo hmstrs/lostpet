@@ -18,7 +18,7 @@ export default async (req, res) => {
     const result = await collection.insertOne(Object.assign(req.body, { status: 'pending' }));
     console.debug(result.ops);
     res.statusCode = 201;
-    res.send(result.ops).end();
+    res.send(result.ops);
   } else {
     res.statusCode = 404;
     res.end('Try another HTTP Method');

@@ -19,9 +19,18 @@ export default async (req, res) => {
     const result = await collection.insertOne(req.body);
     console.debug(result.ops);
     res.statusCode = 201;
-    res.send(result.ops).end();
+    return res.send(result.ops).end();
+  } else if (req.method === 'GET') {
+    // pre setup of DB
+    await connectIfNot();
+    const collection = global.DB.collection('Locations');
+    // pre setup of DB
+    const result = await collection.find(req.query).toArray();
+    console.debug(result);
+    res.statusCode = 200;
+    res.send(result);
   } else {
     res.statusCode = 404;
-    res.end('Try another HTTP Method');
+    return res.end('Try another HTTP Method');
   }
 }

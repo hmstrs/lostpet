@@ -13,10 +13,10 @@ export default async (req, res) => {
     await connectIfNot();
     const collection = global.DB.collection('Confirmations');
     // pre setup of DB
-    const result = await collection.findOne(Object.assign(req.query, { status: "pending" })).toArray();
-    console.debug(result.ops);
+    const result = await collection.findOne(Object.assign(req.query, { status: "pending" }));
+    console.debug(result);
     res.statusCode = 200;
-    res.send(result.ops).end();
+    res.send(result);
   } else {
     res.statusCode = 404;
     res.end('Try another HTTP Method');
